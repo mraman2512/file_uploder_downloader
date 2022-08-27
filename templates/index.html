@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File uploader</title>
+    <style>
+      * {
+        margin: 0px;
+        outline: 0px;
+        box-sizing: border-box;
+      }
+
+      .upper-container {
+        max-width: 1100px;
+        width: 80%;
+        margin: 50px auto;
+        text-align: center;
+        padding: 3em 0;
+      }
+
+      .container {
+        max-width: 1100px;
+        width: 80%;
+        margin: 50px auto;
+        border: 2px dotted green;
+        text-align: center;
+        padding: 3em 0;
+      }
+
+      .btn {
+        margin-top: 2em;
+        padding: 0.75em 3em;
+        background-color: cadetblue;
+        border: none;
+        border-radius: 10px;
+        color: white;
+      }
+      h4 {
+        margin: 30px 0px;
+      }
+
+      ul {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="ref upper-container">
+      <h2>Welcome To Page !!</h2>
+        <h3>For Refrence You can use these .</h3>
+
+        <h4>Images</h4>
+        <ul>
+          <li>https://res.cloudinary.com/deblnblei/image/upload/v1545648047/party_ipe2ld.jpg</li>
+          <li>https://res.cloudinary.com/deblnblei/image/upload/v1661592145/cld-sample.jpg</li>
+          <li>https://res.cloudinary.com/deblnblei/image/upload/v1661592145/cld-sample-5.jpg</li>
+          <li>https://res.cloudinary.com/deblnblei/image/upload/v1545648314/images_1_pq5bds.jpg</li>
+        </ul>
+
+        <h4>Video</h4>
+        <ul>
+          <li>https://res.cloudinary.com/deblnblei/video/upload/v1545648733/nature_urdtcm.mp4</li>
+        </ul>
+        
+    </div>
+    <div class="container">
+      <form action="{{ url_for('upload') }}" method="post">
+            Enter URL : <input type="text" name="projectFilePath"><br>
+            <input type="submit"  class="btn" value="Submit">
+          </form>
+    </div>
+    
+  </body>
+</html>
